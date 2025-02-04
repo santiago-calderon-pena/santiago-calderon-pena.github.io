@@ -48,9 +48,9 @@ pnpm run dev
 │   │   │   ├── post1.md
 │   │   │   ├── post2.md
 │   │   │   └── post3.md
-│   │   ├── store/
-│   │   │   ├── item1.md
-│   │   │   ├── item2.md
+│   │   ├── publications/
+│   │   │   ├── pub1.md
+│   │   │   ├── pub2.md
 │   ├── layouts/
 │   │   └── BaseLayout.astro
 │   │   └── PostLayout.astro
