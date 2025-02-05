@@ -17,7 +17,7 @@ const storeSchema = z.object({
     custom_link_label: z.string(),
     custom_link: z.string().optional(),
     updatedDate: z.coerce.date(),
-    pricing: z.string().optional(),
+    authors: z.string().optional(),
     oldPricing: z.string().optional(),
     badge: z.string().optional(),
     checkoutUrl: z.string().optional(),

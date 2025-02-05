@@ -11,7 +11,7 @@ const {
   description,
   updatedDate,
   heroImage,
-  pricing,
+  authors,
   oldPricing,
   checkoutUrl,
   badge,
@@ -39,7 +39,7 @@ import { Image } from "astro:assets";
         </h1>
         <div class="flex place-content-between items-center">
           <div class="grow md:grow-0">
-            <span class="text-xl mr-1"> {pricing}</span>
+            <span class="text-xl mr-1"> {authors}</span>
             <span class="text-md opacity-50 line-through">{oldPricing}</span>
           </div>
           <div>
