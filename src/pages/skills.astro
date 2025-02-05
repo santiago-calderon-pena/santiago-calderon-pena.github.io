@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout sideBarActiveItemID="skills">
+
+  <div class="mb-5">
+    <div class="text-3xl font-bold mb-4 text-gray-800">Languages</div>
+    <ul class="list-none pl-0 space-y-4">
+      <li class="text-lg flex items-center hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-full overflow-hidden mr-4 shadow-lg transition-transform transform">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="English Flag" class="w-full h-full object-cover">
+        </div>
+        <strong class="text-lg text-gray-700">English</strong> : C2, TOEFL 111/120
+      </li>
+      <li class="text-lg flex items-center hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-full overflow-hidden mr-4 shadow-lg transition-transform transform">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Spanish Flag" class="w-full h-full object-cover">
+        </div>
+        <strong class="text-lg text-gray-700">Spanish</strong> : Native
+      </li>
+      <li class="text-lg flex items-center hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-full overflow-hidden mr-4 shadow-lg transition-transform transform">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French Flag" class="w-full h-full object-cover">
+        </div>
+        <strong class="text-lg text-gray-700">French</strong> : B2, DELF
+      </li>
+      <li class="text-lg flex items-center hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-full overflow-hidden mr-4 shadow-lg transition-transform transform">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="German Flag" class="w-full h-full object-cover">
+        </div>
+        <strong class="text-lg text-gray-700">German</strong> : B1, Sprach Institut
+      </li>
+      <li class="text-lg flex items-center hover:bg-gray-100 p-3 rounded-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-full overflow-hidden mr-4 shadow-lg transition-transform transform">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" alt="Italian Flag" class="w-full h-full object-cover">
+        </div>
+        <strong class="text-lg text-gray-700">Italian</strong> : A2, Istituto Italiano di Cultura
+      </li>
+    </ul>
+  </div>
+  
+
+  <div class="mb-5">
+    <div class="text-3xl font-bold mb-4 text-gray-800">Tech Stack</div>
+    <ul class="list-disc md:columns-5 columns-2 mx-6 space-y-3">
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Python</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Pytorch</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Tensorflow</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Azure</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Azure Machine Learning</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">AWS</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">GCP</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">.NET</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">SQL</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Java</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Spring</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Pandas</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Spacy</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Sci-kit Learn</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Docker</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">Kubernetes</li>
+      <li class="text-lg text-gray-700 hover:text-gray-900 transition duration-300">MongoDB</li>
+    </ul>
+  </div>  
+  
+</BaseLayout>
