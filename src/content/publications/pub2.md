@@ -1,11 +1,11 @@
 ---
 title: "Explainable AI for the classification of brain MRIs"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-custom_link_label: "Custom Btn"
-custom_link: "https://customurl.com/"
+custom_link_label: "Read preprint"
+custom_link: "https://assets-eu.researchsquare.com/files/rs-4619245/v1_covered_8418deb1-3e27-453c-9961-ae06d3d068ce.pdf?c=1732719880"
 updatedDate: "Sep 11 2022"
 authors: "Nathan Blake, Hana Chockler, David A. Kelly, Santiago Calderón-Peña*, Akchunya Chanchal"
-#oldPricing: "$25.5"
+badge: "ResearchGate preprint"
 checkoutUrl: "https://checkouturl.com/"
 heroImage: "/mrxai.png"
 ---
