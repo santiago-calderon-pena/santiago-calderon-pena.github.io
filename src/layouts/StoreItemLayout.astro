@@ -17,6 +17,7 @@ const {
   badge,
   custom_link,
   custom_link_label,
+  citation,
 } = Astro.props;
 
 dayjs.extend(localizedFormat);
@@ -29,23 +30,34 @@ import { Image } from "astro:assets";
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {
         heroImage && (
-          <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
+          <Image
+            width={750}
+            height={422}
+            format="webp"
+            src={heroImage}
+            alt={title}
+            class="w-full mb-6"
+          />
         )
       }
-      <div class="">
+      <div>
         <h1 class="title my-2 text-4xl font-bold">
           {title}
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
         <div class="flex place-content-between items-center">
           <div class="grow md:grow-0">
-            <span class="text-xl mr-1"> {authors}</span>
+            <span class="text-xl mr-1">{authors}</span>
             <span class="text-md opacity-50 line-through">{oldPricing}</span>
           </div>
           <div>
             {
               custom_link && (
-                <a class="btn btn-outline grow md:grow-0 ml-4" href={custom_link} target="_blank">
+                <a
+                  class="btn btn-outline grow md:grow-0 ml-4"
+                  href={custom_link}
+                  target="_blank"
+                >
                   {custom_link_label}
                 </a>
               )
@@ -53,8 +65,66 @@ import { Image } from "astro:assets";
           </div>
         </div>
       </div>
-      <div class="divider my-2"></div>
       <slot />
+      <div class="divider my-2"></div>
+
+      <h3 class="text-lg font-semibold mt-6">How to cite this work:</h3>
+      <div class="relative">
+        <pre
+          id="citation-text"
+          class="whitespace-pre-wrap break-words text-gray-700 dark:text-gray-300 text-sm bg-gray-100 dark:bg-gray-800 px-3 pt-2 pb-1 rounded-md border border-gray-200 dark:border-gray-700">
+          <br /><br />{citation}
+        </pre>
+
+        <button
+          class="absolute top-2 right-2 flex items-center gap-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded-md"
+          id="copy-btn"
+          title="Copy citation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M15 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"
+            ></path>
+          </svg>
+          <span>Copy</span>
+        </button>
+      </div>
     </article>
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const copyButton = document.getElementById("copy-btn");
+      const citationText = document.getElementById("citation-text").innerText;
+
+      copyButton.addEventListener("click", () => {
+        navigator.clipboard.writeText(citationText).then(() => {
+          copyButton.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12l4 4L19 7"></path>
+              </svg>
+              <span>Copied</span>
+            `;
+          setTimeout(() => {
+            copyButton.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M15 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"></path>
+              </svg>
+              <span>Copy</span>
+            `;
+          }, 1500);
+        });
+      });
+    });
+  </script>
 </BaseLayout>
