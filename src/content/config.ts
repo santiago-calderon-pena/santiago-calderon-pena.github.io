@@ -17,11 +17,12 @@ const storeSchema = z.object({
     custom_link_label: z.string(),
     custom_link: z.string().optional(),
     updatedDate: z.coerce.date(),
-    pricing: z.string().optional(),
+    authors: z.string().optional(),
     oldPricing: z.string().optional(),
     badge: z.string().optional(),
     checkoutUrl: z.string().optional(),
     heroImage: z.string().optional(),
+    citation: z.string().optional()
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;
@@ -32,5 +33,5 @@ const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {
     'blog': blogCollection,
-    'store': storeCollection
+    'publications': storeCollection
 }
