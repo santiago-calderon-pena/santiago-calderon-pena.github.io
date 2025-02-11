@@ -100,19 +100,31 @@ import { Image } from "astro:assets";
     </article>
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+  <script client:load>
+    document.addEventListener("astro:after-swap", attachCopyButtonHandler);
+    document.addEventListener("DOMContentLoaded", attachCopyButtonHandler);
+  
+    function attachCopyButtonHandler() {
       const copyButton = document.getElementById("copy-btn");
-      const citationText = document.getElementById("citation-text").innerText;
-
+      const citationElement = document.getElementById("citation-text");
+  
+      if (!copyButton || !citationElement) return;
+  
       copyButton.addEventListener("click", () => {
+        const citationText = citationElement.textContent.trim();
+  
+        if (!citationText) {
+          console.error("No citation text found.");
+          return;
+        }
+  
         navigator.clipboard.writeText(citationText).then(() => {
           copyButton.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12l4 4L19 7"></path>
-        </svg>
-              <span>Copied</span>
-            `;
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12l4 4L19 7"></path>
+            </svg>
+            <span>Copied</span>
+          `;
           setTimeout(() => {
             copyButton.innerHTML = `
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -122,8 +134,12 @@ import { Image } from "astro:assets";
               <span>Copy</span>
             `;
           }, 1500);
+        }).catch((err) => {
+          console.error("Failed to copy text: ", err);
         });
       });
-    });
+    }
   </script>
+  
+  
 </BaseLayout>
