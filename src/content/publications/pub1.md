@@ -10,7 +10,16 @@ custom_link: "https://arxiv.org/pdf/2408.11963"
 updatedDate: "Sep 15 2022"
 badge: "arXiv preprint"
 heroImage: "/incx.png"
-citation: ""
+citation: |
+ @misc{calderónpeña2024realtimeincrementalexplanationsobject,
+    title={Real-Time Incremental Explanations for Object Detectors}, 
+    author={Santiago Calderón-Peña and Hana Chockler and David A. Kelly},
+    year={2024},
+    eprint={2408.11963},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2408.11963}, 
+  }
 ---
 
 Abstract: Existing black box explainability tools for object detectors
