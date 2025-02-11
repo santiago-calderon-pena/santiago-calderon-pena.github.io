@@ -5,7 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://santiagocalderon1999.github.io',
-  base: 'personal-site',
+  site: 'http://santiago-calderon-pena.github.io/',
   integrations: [mdx(), sitemap(), tailwind()]
 });
