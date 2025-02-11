@@ -3,7 +3,6 @@ import { type StoreSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
-
 export interface Props extends StoreSchema {}
 
 const {
@@ -109,9 +108,9 @@ import { Image } from "astro:assets";
       copyButton.addEventListener("click", () => {
         navigator.clipboard.writeText(citationText).then(() => {
           copyButton.innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12l4 4L19 7"></path>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12l4 4L19 7"></path>
+            </svg>
               <span>Copied</span>
             `;
           setTimeout(() => {
