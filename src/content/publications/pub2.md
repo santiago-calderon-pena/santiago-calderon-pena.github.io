@@ -2,10 +2,10 @@
 title: "Explainable AI for the Classification of Brain MRIs"
 description: "We performed an analysis of explainable AI tools in a medical setting, demonstrating the significant advantages of ReX, a newly introduced tool at King's College London."
 custom_link_label: "Read preprint"
-custom_link: "https://assets-eu.researchsquare.com/files/rs-4619245/v1_covered_8418deb1-3e27-453c-9961-ae06d3d068ce.pdf?c=1732719880"
+custom_link: "https://www.researchsquare.com/article/rs-4619245/v1"
 updatedDate: "Sep 11 2022"
 authors: "Nathan Blake, Hana Chockler, David A. Kelly, Santiago Calderón-Peña*, Akchunya Chanchal"
-badge: "ResearchGate preprint"
+badge: "ResearchSquare preprint"
 checkoutUrl: "https://checkouturl.com/"
 heroImage: "/mrxai.png"
 citation: |

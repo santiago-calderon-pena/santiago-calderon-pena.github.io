@@ -6,7 +6,7 @@ rely on multiple calls to the model, which prevents them from
 computing explanations in real time. In this paper we introduce IncX, an algorithm for real-time incremental approximations of explanations, based on linear transformations of
 saliency maps."
 custom_link_label: "Read preprint"
-custom_link: "https://arxiv.org/pdf/2408.11963"
+custom_link: "https://arxiv.org/abs/2408.11963"
 updatedDate: "Sep 15 2022"
 badge: "arXiv preprint"
 heroImage: "/incx.png"
