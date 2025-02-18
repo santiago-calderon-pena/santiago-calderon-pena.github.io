@@ -8,7 +8,7 @@ saliency maps."
 custom_link_label: "Read preprint"
 custom_link: "https://arxiv.org/abs/2408.11963"
 updatedDate: "Sep 15 2022"
-badge: "arXiv preprint"
+badge: "Under Review"
 heroImage: "/incx.png"
 citation: |
  @misc{calderónpeña2024realtimeincrementalexplanationsobject,

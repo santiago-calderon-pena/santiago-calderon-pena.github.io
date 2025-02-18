@@ -5,7 +5,7 @@ custom_link_label: "Read preprint"
 custom_link: "https://www.researchsquare.com/article/rs-4619245/v1"
 updatedDate: "Sep 11 2022"
 authors: "Nathan Blake, Hana Chockler, David A. Kelly, Santiago Calderón-Peña*, Akchunya Chanchal"
-badge: "ResearchSquare preprint"
+badge: "Under Review"
 checkoutUrl: "https://checkouturl.com/"
 heroImage: "/mrxai.png"
 citation: |
