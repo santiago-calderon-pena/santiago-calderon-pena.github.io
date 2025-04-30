@@ -22,6 +22,17 @@ const {
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFC2XWFZV9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-DFC2XWFZV9');
+    </script>
+    <!-- End Google Analytics -->
+    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
