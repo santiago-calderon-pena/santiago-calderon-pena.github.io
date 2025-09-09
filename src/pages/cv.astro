@@ -4,32 +4,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout sideBarActiveItemID="cv">
-  <!-- <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div> -->
-
-  <!-- <div class="mb-10 text-justify">
-    I am an <i>engineer</i> with a strong background in <i>AI</i>, <i
-      >software engineering</i
-    >, and <i>solution architecture</i>. Fluent in multiple languages, I bring a
-    multilingual advantage to global projects. My expertise spans the <i
-      >development and deployment of machine learning models</i
-    >, as well as the creation of
-    <i>Generative AI (GenAI) solutions</i> using <i
-      >large language models (LLMs)</i
-    >. I have a strong focus on
-    <i>Explainable AI (XAI)</i>, working to improve the transparency and
-    interpretability of AI models, particularly in
-    <i>Computer Vision</i>. My research explores methods to better understand
-    deep learning models, making AI decisions more trustworthy and reliable. I
-    am passionate about <i>research</i> and have contributed to <i
-      >peer-reviewed publications</i
-    >
-    as a <i>Research Assistant</i>, a process I find deeply rewarding. My
-    enthusiasm for <i>innovation</i> drives me to design and implement <i
-      >scalable, cutting-edge solutions</i
-    > that create real-world impact.
-  </div> -->
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
@@ -38,61 +12,30 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
       title="King's College London, London, United Kingdom"
-      subtitle="MSc Advanced Computing / Computer Science"
-      date="Sep 2023 - Jan 2025"
+      subtitle="MSc in Advanced Computing (Computer Science)"
+      date="Sep 2023 – Jan 2025"
     >
-      <strong>Thesis:</strong> Real-Time Incremental Explanations and Saliency Maps
-      for Object Detection in Videos (Awarded 94/100), supervised by Prof. Hana Chockler.
-      <br />
-      <strong>Awards:</strong>
       <ul class="list-disc pl-5">
-        <li>Awarded with Distinction</li>
-        <li>
-          Colfuturo scholarship: Ranked 4th for this scholarship, placing in the
-          top 0.5% of 779 candidates
-        </li>
-      </ul>
-      <strong>Relevant Modules:</strong>
-      <ul class="list-disc pl-5">
-        <li>Computer Vision</li>
-        <li>Neural Networks and Deep Learning</li>
-        <li>Data Mining</li>
-        <li>Agents and Multi-Agent Systems</li>
-      </ul>
-      <strong>Extracurriculars:</strong>
-      <ul class="list-disc pl-5">
-        <li>Participated as a Research Assistant in Explainable AI</li>
-        <li>
-          Lead in the Google Developers Student Club (GDSC) at King's College
-          London
-        </li>
+        <li>Graduated with <strong>Distinction</strong> (among the top students in the cohort).</li>
+        <li><strong>Master’s Thesis:</strong> “Real-Time Incremental Explanations and Saliency Maps for Object Detection in Videos” <strong>(94/100)</strong>, supervised by Prof. Hana Chockler.</li>
+        <li><strong>Scholarship:</strong> Colfuturo - Foundation for the Future of Colombia (ranked 4th nationwide, top 0.5% of 779 candidates).</li>
+        <li><strong>Relevant Coursework:</strong> Computer Vision, Neural Networks and Deep Learning, Data Mining, Multi-Agent Systems.</li>
+        <li><strong>Research Interests:</strong> Explainable AI, Computer Vision.</li>
+        <li><strong>Extracurriculars:</strong> Research Assistant in Explainable AI; Student Lead, Google Developer Student Club (GDSC).</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
       title="Universidad Militar Nueva Granada, Bogotá, Colombia"
-      subtitle="Mechatronics Engineering"
-      date="Jan 2017 - Apr 2022"
+      subtitle="BSc in Mechatronics Engineering"
+      date="Jan 2017 – Apr 2022"
     >
-      <strong>Thesis:</strong> Design and implementation of nonlinear controllers
-      for a 3D printing system with continuous motors modeled as a Cartesian robot
-      (Awarded 5.0/5.0).
-      <br />
-      <strong>Awards:</strong>
       <ul class="list-disc pl-5">
-        <li>Full scholarship given by Colombian Ministry of Information Technologies and Communications</li>
-        <li>Cum laude, having the highest GPA (4.54/5.0)</li>
-        <li>'Tesis laureada' - Thesis awarded with the highest of honours</li>
-        <li>University medal for academic merit</li>
-        <li>5x 'matrícula de honor' for having the best GPA in the semester</li>
-      </ul>
-      <strong>Extracurriculars:</strong>
-      <ul class="list-disc pl-5">
-        <li>Participation in Davinci research group</li>
-        <li>
-          Member of the karate team, winning gold, silver, and bronze medals in
-          multiple university-level championships
-        </li>
+        <li>Graduated <strong>Cum Laude</strong> with the <strong>highest GPA in cohort (4.54/5.0)</strong>.</li>
+        <li><strong>Bachelor’s Thesis:</strong> “Design and Implementation of Nonlinear Controllers for 3D Printing Systems” (5.0/5.0), awarded <i>Tesis Laureada</i> (highest honors).</li>
+        <li><strong>Honors & Awards:</strong> University Medal for Academic Merit, 5× Matrícula de Honor (highest semester GPA).</li>
+        <li><strong>Scholarship:</strong> Full scholarship awarded by the Colombian Ministry of ICT.</li>
+        <li><strong>Extracurriculars:</strong> Member of Davinci research group; Karate team competitor (multiple medals).</li>
       </ul>
     </TimeLineElement>
   </div>
@@ -100,38 +43,28 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Research Experience</div>
   </div>
-  
+
   <div class="time-line-container mb-10">
     <TimeLineElement
       title="Research Assistant"
       subtitle="King's College London"
-      date="Sep 2023 - Present"
+      date="Sep 2023 – Present"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Conducted research in Explainable AI (XAI) under the supervision of
-          Prof. Hana Chockler, contributing to peer-reviewed white papers
-          submitted to leading AI conferences.
-        </li>
-        <li>
-          Implemented and optimized XAI algorithms for computer vision tasks,
-          focusing on real-time, causality-based techniques (ReX and IncX),
-          utilizing PyTorch and ONNX, and automating workflows with GitHub
-          Actions.
-        </li>
+        <li>Developed the <strong>IncX algorithm</strong> for real-time explanations of object detectors, achieving an order-of-magnitude reduction in latency compared to benchmarks.</li>
+        <li>Conducting research in <strong>Explainable AI (XAI)</strong> with peer-reviewed publications and submissions to top-tier AI conferences.</li>
+        <li>Contributed to XAI methods for computer vision (<strong>IncX, ReX</strong>), leveraging PyTorch and ONNX within reproducible ML workflows.</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
       title="Teaching Assistant"
       subtitle="Universidad Militar Nueva Granada"
-      date="Aug 2020 - Jun 2021"
+      date="Aug 2020 – Jun 2021"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Assisted in the module on models of mechatronic systems (2020-II,
-          2021-I), providing tutorials and support to small groups of students.
-        </li>
+        <li>Delivered tutorials for the <strong>Mechatronic Systems Models</strong> module.</li>
+        <li>Contributed to the <strong>Davinci research group</strong>, focusing on nonlinear control systems and applied mechatronics.</li>
       </ul>
     </TimeLineElement>
   </div>
@@ -142,63 +75,37 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Software Engineer - ML"
-      subtitle="Linqia (San Francisco based start-up specializing in data analysis for influencer marketing using AI)"
-      date="Jan 2025 - Present"
+      title="Software Engineer – AI"
+      subtitle="Linqia, Remote (Core engineering team, San Francisco, USA)"
+      date="Jan 2025 – Present"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Applied large language models (LLMs) for clustering and topic modeling, 
-          driving enhanced insights into marketing campaign data.
-        </li>
+        <li>Designed and deployed <strong>AI agents</strong> using Google’s ADK and A2A, developing MCP tools for real-time data retrieval, computation and system interaction.</li>
+        <li>Applied <strong>large language models (LLMs)</strong> for clustering and topic modeling, deriving insights from high-volume text data.</li>
+        <li>Optimized large-scale <strong>data processing pipelines</strong>, improving efficiency and scalability in production workflows.</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
       title="Software Engineer"
-      subtitle="Quorum Software (US-based company providing software solutions for the oil and gas industry.)"
-      date="Dec 2022 - Dec 2024"
+      subtitle="Quorum Software, Bogotá & London"
+      date="Dec 2022 – Dec 2024"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Implemented SHAP-based explainable AI methods for a document
-          classification model deployed in Azure, improving model behavior
-          transparency for product and engineering teams.
-        </li>
-        <li>
-          Architected and developed a generative AI application integrating
-          Azure AI Search and OpenAI (GPT-4) for Retrieval Augmented Generation
-          (RAG), impacting global teams in Norway, Ukraine, South Africa, and
-          the U.S.
-        </li>
-        <li>
-          Led the design, training, and deployment of scalable machine learning
-          solutions using Azure Machine Learning, optimizing model training,
-          cost efficiency, and operational processes.
-        </li>
+        <li>Led a <strong>text classification project</strong> comparing traditional NLP methods with fine-tuned BERT-based models, incorporating SHAP for interpretability.</li>
+        <li>Developed a <strong>Retrieval-Augmented Generation (RAG)</strong> system using Azure AI Search and OpenAI GPT-4, enabling natural-language access to enterprise data.</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
-      title="Junior Software Engineer"
-      subtitle="Kin + Carta (Global IT consulting firm)"
-      date="Mar 2022 - Oct 2022"
+      title="Junior Software Developer"
+      subtitle="Kin + Carta, Remote (US, Argentina, Colombia collaboration)"
+      date="Mar 2022 – Oct 2022"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Developed an internal RESTful API in Java Spring Boot serving a React
-          frontend, significantly reducing employee onboarding time.
-        </li>
-        <li>
-          Leveraged Google Cloud Platform (GCP) services to deploy Java RESTful
-          APIs, improving internal process efficiency.
-        </li>
+        <li>Built and deployed <strong>Java RESTful APIs</strong> on GCP, supporting scalable automation and decision-making pipelines.</li>
       </ul>
     </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Academic Experience</div>
   </div>
 
   <div class="mb-5">
@@ -207,39 +114,25 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Student Lead"
-      subtitle="Google Developer Students Club - King's College London"
-      date="Sep 2023 - Mar 2024"
+      title="Web Dev Student Lead"
+      subtitle="Google Developer Students Club – King’s College London"
+      date="Sep 2023 – Mar 2024"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Conducted a workshop on MLOps in Google Cloud, focusing on using
-          Vertex AI to automatically train and deploy a neural network for digit
-          recognition using the MNIST dataset.
-        </li>
-        <li>
-          Led a workshop on using the Vertex AI APIs for various industry
-          applications, including text-to-speech, speech-to-text, and face
-          recognition
-        </li>
+        <li>Led a workshop on <strong>MLOps in Google Cloud</strong>, demonstrating how to use Vertex AI to automatically train and deploy a neural network for digit recognition using the MNIST dataset.</li>
+        <li>Conducted a session on applying <strong>Vertex AI APIs</strong> for industry applications, including text-to-speech, speech-to-text, and face recognition.</li>
+        <li>Presented on developing <strong>APIs with Flask</strong> for NLP tasks such as lemmatization and named entity recognition using spaCy.</li>
       </ul>
     </TimeLineElement>
 
     <TimeLineElement
       title="Computer Skills Education Volunteer"
       subtitle="Fundación Laudes Infantis"
-      date="Jul 2022 - Jun 2023"
+      date="Jul 2022 – Jun 2023"
     >
       <ul class="list-disc pl-5">
-        <li>
-          Taught basic robotics to children, instructing dozens of individuals
-          in low-income areas of Bogotá.
-        </li>
-        <li>
-          Provided foundational education in JavaScript and HTML to adolescents
-          and adults in Bogotá, enabling young entrepreneurs to create their own
-          business websites.
-        </li>
+        <li>Taught <strong>basic robotics</strong> to children in low-income areas of Bogotá, empowering dozens of individuals with hands-on STEM skills.</li>
+        <li>Provided foundational <strong>JavaScript and HTML education</strong> to adolescents and adults, helping them build websites to support their entrepreneurial ventures.</li>
       </ul>
     </TimeLineElement>
   </div>
@@ -249,30 +142,9 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a
-        href="https://learn.microsoft.com/en-us/users/santiagocalderon/credentials/e0bea56fd07e8ab7"
-        target="_blank"
-        class="text-teal-600 hover:text-teal-800 font-semibold underline"
-        >Microsoft Certified DP-100: Azure Data Scientist Associate</a
-      >
-    </li>
-    <li>
-      <a
-        href="https://learn.microsoft.com/en-us/users/santiagocalderon/credentials/e5960be874975467"
-        target="_blank"
-        class="text-teal-600 hover:text-teal-800 font-semibold underline"
-        >Microsoft Certified AI-102: Azure AI Engineer Associate</a
-      >
-    </li>
-    <li>
-      <a
-        href="https://www.credential.net/4325239e-1c48-44d9-a500-56f497288778"
-        target="_blank"
-        class="text-teal-600 hover:text-teal-800 font-semibold underline"
-        >Google Cloud Certified - Associate Cloud Engineer</a
-      >
-    </li>
+    <li><a href="https://learn.microsoft.com/en-us/users/santiagocalderon/credentials/e0bea56fd07e8ab7" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Microsoft Certified DP-100: <strong>Azure Data Scientist Associate</strong></a></li>
+    <li><a href="https://learn.microsoft.com/en-us/users/santiagocalderon/credentials/e5960be874975467" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Microsoft Certified AI-102: <strong>Azure AI Engineer Associate</strong></a></li>
+    <li><a href="https://www.credential.net/4325239e-1c48-44d9-a500-56f497288778" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Google Cloud Certified – <strong>Associate Cloud Engineer</strong></a></li>
   </ul>
 
   <div class="mt-8 text-center">
@@ -286,26 +158,4 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </a>
   </div>
 
-  <!--div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul-->
 </BaseLayout>
