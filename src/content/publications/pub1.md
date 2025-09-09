@@ -1,36 +1,31 @@
 ---
-title: "Real-time incremental explanations for object detectors"
-authors: "Santiago Calderón-Peña*, Hana Chockler, David A. Kelly"
-description: "Existing black box explainability tools for object detectors
-rely on multiple calls to the model, which prevents them from
-computing explanations in real time. In this paper we introduce IncX, an algorithm for real-time incremental approximations of explanations, based on linear transformations of
-saliency maps."
-custom_link_label: "Read preprint"
-custom_link: "https://arxiv.org/abs/2408.11963"
-updatedDate: "Sep 15 2022"
-badge: "Under Review"
-heroImage: "/incx.png"
+title: "Explainable AI for the Classification of Brain MRIs"
+description: "We performed an analysis of explainable AI tools in a medical setting, demonstrating the significant advantages of ReX, a newly introduced tool at King's College London."
+custom_link_label: "Read"
+custom_link: "https://www.researchsquare.com/article/rs-4619245/v1"
+updatedDate: "Sep 8 2025"
+authors: "Nathan Blake, Hana Chockler, David A. Kelly, Santiago Calderón-Peña*, Akchunya Chanchal"
+badge: "ECAI 2025 Workshop on EXPLIMED"
+checkoutUrl: "https://checkouturl.com/"
+heroImage: "/mrxai.png"
 citation: |
- @misc{calderónpeña2024realtimeincrementalexplanationsobject,
-    title={Real-Time Incremental Explanations for Object Detectors}, 
-    author={Santiago Calderón-Peña and Hana Chockler and David A. Kelly},
-    year={2024},
-    eprint={2408.11963},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2408.11963}, 
-  }
+    @misc{blake2024explainable,
+        title = {Explainable AI for the Classification of Brain MRIs}, 
+        author = {Nathan Blake and David Kelly and Santiago Calderón-Peña and Akchunya Chanchal and Hana Chockler},
+        year = {2024},
+        month = {06},
+        doi = {10.21203/rs.3.rs-4619245/v1}
+    }
 ---
 
 <h4>Abstract</h4>  
-<p>Existing black-box explainability tools for object detectors rely on multiple calls to the model, which prevents them from computing explanations in real time. In this paper, we introduce <strong>IncX</strong>, an algorithm for real-time incremental approximations of explanations, based on linear transformations of saliency maps. We implement IncX on top of <strong>D-RISE</strong>, a state-of-the-art black-box explainability tool for object detectors. We show that IncX’s explanations are comparable in quality to those of D-RISE, with insertion curves being within <strong>8%</strong>, and are computed <strong>two orders of magnitude faster</strong> than D-RISE’s explanations.</p>
+<p>Machine learning applied to medical imaging suffers from a lack of trust due to the opacity of AI models and the absence of clear explanations for their outcomes. <strong>Explainable AI (XAI)</strong> has therefore become a crucial research focus, particularly in high-stakes domains such as healthcare. However, many AI models—both research-based and commercial—are inaccessible for white-box analysis, which requires internal model access. This underscores the need for <strong>black-box explainability tools</strong> tailored for medical applications. While several such tools exist for general images, their effectiveness in medical imaging remains largely unexplored.</p>
 
 <h4>Methods</h4>  
-<p>We leveraged computer vision definitions to mathematically prove that the proposed linear transformation of the saliency map can be represented by rigid transformations of the 3D object. In addition to that, we performed our experiments on a subset of <strong>LaSOT</strong> dataset for three models, being <strong>YOLOv10, Faster-RCNN, and RT-DETR</strong>. We compute classic metrics for explainable AI algorithms, such as <strong>insertion</strong> and <strong>deletion</strong> to measure the performance of our algorithm.</p>
+<p>We utilized a publicly available dataset of <strong>brain MRI images</strong> and a classification model trained to distinguish between cancerous and non-cancerous slices. We evaluated several black-box explainability tools, including <strong>LIME, RISE, Integrated Gradients (IG), SHAP, and ReX</strong>, as well as <strong>Grad-CAM</strong> as a white-box baseline. Our assessment employed widely accepted evaluation metrics such as the <strong>Dice Coefficient, Hausdorff Distance, and Jaccard Index</strong>. Additionally, we introduced a novel <strong>Penalized Dice Coefficient</strong> that integrates multiple metrics to provide a more comprehensive evaluation of explanation quality.</p>
 
 <h4>Results</h4>  
-<p>The insertion values for IncX are consistently within <strong>8%</strong> of those observed for D-RISE, with all other metrics displaying similar trends. Moreover, the computation time for IncX is <strong>two orders of magnitude lower</strong> than that of D-RISE (<strong>111 times faster</strong> for Faster R-CNN), highlighting the suitability of IncX for real-time scenarios. In addition, when measuring the similarity between the original explanations produced by D-RISE and the ones produced by IncX, we can see that the results show a clear similarity between the approximations implemented by IncX and the original saliency maps created by D-RISE.</p>
+<p>Our results show that <strong>ReX</strong> achieves a Dice Coefficient of <strong>0.42±0.20</strong>, outperforming other black-box methods and demonstrating performance comparable to <strong>Grad-CAM</strong> (Dice Coefficient = <strong>0.33±0.22</strong>). A qualitative analysis further highlights key failure modes in existing XAI methods, emphasizing the importance of robust explainability tools in medical applications.</p>
 
 <h4>Conclusions</h4>  
-<p>Our results demonstrate that IncX operates in real time, with negligible overhead over the object detector and is <strong>two orders of magnitude faster</strong> than generating a new saliency map. Moreover, IncX produces saliency maps closely aligned with freshly computed maps, achieving an average correlation coefficient of approximately <strong>0.8</strong> across all models used, with minimal computational overhead. The quality metrics for assessing explainable AI algorithms show that IncX is comparable to D-RISE, with the insertion score within <strong>8%</strong> of D-RISE’s ones.</p>  
-<p>IncX handles linear transformations of objects; future work will address the current limitations related to rotation and object deformation. We anticipate future applications of this algorithm in various industries, particularly in <strong>self-driving cars</strong>.</p>
+<p>All the XAI tools evaluated in this study exhibit limitations when applied to <strong>tumor detection in MRIs</strong>. However, <strong>ReX</strong> consistently outperforms alternative black-box methods and achieves results on par with <strong>Grad-CAM</strong>, a significant finding given that the latter relies on white-box access. These findings underscore the potential of <strong>ReX</strong> as a viable XAI tool for medical imaging applications.</p>
