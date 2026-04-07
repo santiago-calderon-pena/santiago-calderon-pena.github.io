@@ -12,96 +12,51 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Santiago Calderón-Peña</div>
-    <div class="text-3xl py-3 font-bold">
-      AI Software Engineer and Research Assistant
+    <div class="text-5xl font-bold">Santiago Calderón-Peña</div>
+    <div class="text-2xl py-3 font-semibold text-base-content/80">
+      ML Engineer and Researcher
     </div>
     <div class="py-2">
-      <div class="text-lg text-justify">
-        I specialize in <i>Explainable AI</i> and <i>Computer Vision</i>. In my
-        role as a Software Engineer - AI, I have had the opportunity to train
-        and deploy Machine Learning models in production pipelines, leveraging <i
-          >Explainable AI (XAI)</i
-        > to enhance model interpretability for stakeholders and improve decision-making
-        processes. <br /><br />
-
-        In addition, I am conducting research under the supervision of Prof.
-        Hana Chockler at <i>King's College London</i>, driven by my passion for
-        research and my desire to explore the deep foundations of <i
-          >Machine Learning</i
-        > through the lens of <i>Explainable AI</i>. My research primarily
-        focuses on <i>Computer Vision</i> and <i>Explainable AI</i>, but I am
-        also deeply interested in multiple modalities.<br />
-        <br />
-
-        As deep learning continues to unlock new possibilities, I am
-        increasingly concerned about the growing complexity of models, which
-        often leads to a loss of understanding of their inner workings. This
-        challenge fuels my passion for <i>Explainable AI</i>. My goal is to
-        develop methodologies that gradually demystify the black-box nature of
-        these models, improving both their transparency and their real-world
-        impact. <br /><br />
-
-        <strong>Interests:</strong>
-        <ul class="list-disc pl-5">
-          <li><i>Explainable AI (including evaluation of these methods)</i></li>
-          <li><i>Computer Vision</i></li>
-          <li><i>Machine Learning Engineering</i></li>
-        </ul>
+      <div class="text-lg leading-relaxed">
+        <p>
+          Machine learning engineer and researcher specializing in <strong>Computer Vision, Generative AI, and Explainable AI</strong>. I design and deploy ML systems that combine research rigor with production reality. 4+ years building models and systems that work at scale across vision, language, and multimodal domains. Fluent in English (C2), French (B2), Spanish (Native), with working knowledge of German and Italian.
+        </p>
       </div>
     </div>
-    <br /><br />
-    <div class="text-lg text-justify">
-      I have a deep admiration for James Clerk Maxwell and his remarkable life.
-      One of his greatest achievements, which I consider fundamental to the
-      world we live in today, was the unification of electricity and magnetism
-      in his equations, now known as Maxwell's equations.
+    <div class="mt-8">
+      <a href="/cv" class="btn btn-primary mr-3">View Full CV</a>
+      <a href="mailto:santiagocalderon1999@gmail.com" class="btn btn-outline">Get in touch</a>
     </div>
-    <br />
-    <div style="text-align: center;">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Maxwell%27sEquations.svg"
-        alt="Maxwell's equations"
-        style="max-width: 80%; height: auto; margin: 0 auto; display: block;"
-      />
-    </div>
-
-    <!--div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
-    </div-->
   </div>
 
-  <!-- <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  <div class="mt-12">
+    <div class="text-3xl w-full font-bold mb-5">Featured Work</div>
   </div>
 
   <HorizontalCard
     title="IncX"
     img="/penguin.gif"
-    desc="IncX is a Python library designed to track and visualize the explanations of video content. Built as part of my master's thesis research, it leverages techniques to interpret and present the underlying reasoning behind object detection models in real-time, making it easier to understand how AI systems make decisions based on video inputs."
+    desc="A Python library for tracking and visualizing real-time explanations of video content. Built as my MSc thesis research, it interprets how object detection models make decisions frame-by-frame using YOLOv10 with incremental explainability methods."
     url="https://github.com/santiago-calderon-pena/IncX?tab=readme-ov-file#incx"
-    badge="NEW"
+    badge="Thesis (92/100)"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="IncX Web Application"
     img="https://raw.githubusercontent.com/SantiagoCalderon1999/IncX_WebApplication/refs/heads/main/blob/web_app_2.PNG"
-    desc="This web application brings the power of IncX to life by allowing users to track real-time video streams, detect objects within the videos using YOLOv10, and visualize the explanations generated by the model. It serves as an interactive tool to explore the relationship between AI object detection and its corresponding interpretability in a user-friendly interface."
+    desc="Interactive web application for real-time video object detection and explanation visualization. Demonstrates how to bring research-grade explainability methods to production, enabling stakeholders to understand AI decisions as they happen."
     url="https://github.com/santiago-calderon-pena/IncX_WebApplication?tab=readme-ov-file"
   />
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest publications</div>
+  <div class="mt-12">
+    <div class="text-3xl w-full font-bold mb-5">Latest Research</div>
   </div>
 
   {
-    last_posts.map((item) => (
-      
-        <HorizontalShopItem
+    last_posts.length > 0 ? (
+      last_posts.map((item) => (
+        <>
+          <HorizontalShopItem
             title={item.data.title}
             img={item.data.heroImage}
             desc={item.data.description}
@@ -113,7 +68,11 @@ const last_posts = posts.slice(0, 3);
             custom_link={item.data.custom_link}
             custom_link_label={item.data.custom_link_label}
           />
-        <div class="divider my-0" />
-    ))
-  } -->
+          <div class="divider my-0" />
+        </>
+      ))
+    ) : (
+      <p class="text-base-content/60">Research papers coming soon.</p>
+    )
+  }
 </BaseLayout>
